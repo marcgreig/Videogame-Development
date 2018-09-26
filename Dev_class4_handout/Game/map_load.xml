@@ -1,0 +1,22 @@
+<!-- Config file for the game -->
+
+ <map>
+   <version value ="0.1"/>
+   <orientation value ="orthogonal"/>
+   <renderorder value ="right_down"/>
+   <width value ="50"/>
+   <height value ="15"/>
+   <tilewidth value ="32"/>
+   <tileheight value ="32"/>
+   <nextobjectid value ="1"/>
+ 
+   <tileset>
+    <firstgid value ="1"/>
+ 		<name value="Desert"/>
+ 		<tilewidth value ="32"/>
+ 		<tileheight value ="32"/>
+  	<spacing value ="1"/>
+	  <margin value ="1"/>
+	  <image source="" width="" height=""/>
+   </tileset>
+ </map>

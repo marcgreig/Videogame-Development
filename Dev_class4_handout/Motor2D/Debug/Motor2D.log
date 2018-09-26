@@ -1,0 +1,16 @@
+﻿  pugixml.cpp
+  j1Window.cpp
+  j1Textures.cpp
+  j1Render.cpp
+  p2Log.cpp
+  j1Scene.cpp
+  j1Map.cpp
+c:\users\marcgr8\downloads\dev_class4_handout\motor2d\j1map.cpp(74): error C2440: '=': cannot convert from 'int' to 'orientation'
+  c:\users\marcgr8\downloads\dev_class4_handout\motor2d\j1map.cpp(74): note: Conversion to enumeration type requires an explicit cast (static_cast, C-style cast or function-style cast)
+c:\users\marcgr8\downloads\dev_class4_handout\motor2d\j1map.cpp(75): error C2440: '=': cannot convert from 'const pugi::char_t *' to 'renderorder'
+  c:\users\marcgr8\downloads\dev_class4_handout\motor2d\j1map.cpp(75): note: There is no context in which this conversion is possible
+  j1Input.cpp
+  j1Audio.cpp
+  j1App.cpp
+  j1Main.cpp
+  Generating Code...
