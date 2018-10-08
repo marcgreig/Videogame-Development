@@ -1,0 +1,13 @@
+﻿  j1Main.cpp
+  j1App.cpp
+  j1Input.cpp
+  j1Map.cpp
+c:\users\marcgr8\documents\github\development\dev_class5_handout\motor2d\j1map.cpp(35): warning C4018: '<': signed/unsigned mismatch
+c:\users\marcgr8\documents\github\development\dev_class5_handout\motor2d\j1map.cpp(37): warning C4018: '<': signed/unsigned mismatch
+c:\users\marcgr8\documents\github\development\dev_class5_handout\motor2d\j1map.cpp(38): warning C4018: '<': signed/unsigned mismatch
+  j1Scene.cpp
+  j1Render.cpp
+  j1Textures.cpp
+  j1Window.cpp
+  Generating Code...
+  Motor2D.vcxproj -> C:\Users\marcgr8\Documents\GitHub\Development\Dev_class5_handout\Debug\Motor 2D.exe

@@ -1,0 +1,15 @@
+﻿  j1Main.cpp
+  j1App.cpp
+  j1Audio.cpp
+  j1Input.cpp
+  j1Map.cpp
+c:\users\marcgr8\documents\github\videogame-development\dev_class6_handout\motor2d\j1map.cpp(68): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\marcgr8\documents\github\videogame-development\dev_class6_handout\motor2d\j1map.cpp(69): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+  j1Scene.cpp
+  p2Log.cpp
+  j1Render.cpp
+  j1Textures.cpp
+  j1Window.cpp
+  pugixml.cpp
+  Generating Code...
+  Motor2D.vcxproj -> C:\Users\marcgr8\Documents\GitHub\Videogame-Development\Dev_class6_handout\Debug\Development - Class 6.exe
