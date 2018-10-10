@@ -1,4 +1,4 @@
-#ifndef __J1PLAYER_H__
+/*#ifndef __J1PLAYER_H__
 #define __J1PLAYER_H__
 
 #include "PugiXml/src/pugixml.hpp"
@@ -11,7 +11,7 @@ struct SDL_Texture;
 struct ObjectsData;
 
 
-class j1Player : j1Module
+class j1Player : public j1Module
 {
 	//-------------Functions-----------------
 public:
@@ -40,7 +40,7 @@ public:
 
 
 	//Positions the player in the start of the current level
-	void Restart();
+	// void Restart();
 
 	//Centers the camera on the player
 	bool PositionCameraOnPlayer();
@@ -58,3 +58,4 @@ private:
 
 #endif // !__J1PLAYER_H__
 
+*/
