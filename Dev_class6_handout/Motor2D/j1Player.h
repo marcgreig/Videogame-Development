@@ -1,4 +1,4 @@
-/*#ifndef __J1PLAYER_H__
+#ifndef __J1PLAYER_H__
 #define __J1PLAYER_H__
 
 #include "PugiXml/src/pugixml.hpp"
@@ -40,10 +40,10 @@ public:
 
 
 	//Positions the player in the start of the current level
-	// void Restart();
+	void Restart();
 
 	//Centers the camera on the player
-	bool PositionCameraOnPlayer();
+	bool CameraOnPlayer();
 
 private:
 
@@ -52,10 +52,19 @@ public:
 
 private:
 
-	iPoint playerPos;
+	// Player rectangle
+	// SDL_Rect playerRect;
 
+	// Player graphs
+	SDL_Texture* graph = nullptr;
+
+	// Player position and scale;
+	iPoint playerPos;
+	uint playerWidth;
+	uint playerHeight;
+
+
+	p2SString folder;
 };
 
 #endif // !__J1PLAYER_H__
-
-*/

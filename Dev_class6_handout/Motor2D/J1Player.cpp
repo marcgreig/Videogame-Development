@@ -1,4 +1,4 @@
-/*#include "j1App.h"
+#include "j1App.h"
 #include "j1Player.h"
 #include "j1Render.h"
 #include "j1Map.h"
@@ -21,14 +21,22 @@ j1Player::~j1Player()
 
 bool j1Player::Awake(pugi::xml_node & config)
 {
-	bool ret = true;
-	config = config.child("player");
+	
+	// Player starting point
+	playerPos.x = config.child("position").attribute("x").as_int();
+	playerPos.y = config.child("position").attribute("y").as_int();
 
-	return ret;
+	// Player size
+	playerHeight = config.child("size").attribute("height").as_int();
+	playerWidth = config.child("size").attribute("width").as_int();
+
+	return true;
 }
 
 bool j1Player::Start()
 {
+
+	if (graph == nullptr) App->tex->Load("textures/text.png");
 	
 	//Sets the player in the start position
 	playerPos.x = 0;
@@ -46,7 +54,7 @@ bool j1Player::Update(float dt)
 bool j1Player::PostUpdate()
 {
 	
-	PositionCameraOnPlayer();
+	CameraOnPlayer();
 
 	return true;
 }
@@ -74,7 +82,7 @@ bool j1Player::Save(pugi::xml_node& data) const
 
 
 
-bool j1Player::PositionCameraOnPlayer()
+bool j1Player::CameraOnPlayer()
 {
 	uint winWidth, winHeight;
 	winWidth = 0;
@@ -97,6 +105,3 @@ bool j1Player::CleanUp()
 	return true;
 
 }
-
-
-*/
