@@ -70,7 +70,6 @@ bool j1Scene::Update(float dt)
 
 	if (App->input->GetKey(SDL_SCANCODE_M) == KEY_REPEAT)
 		App->map->PropagateBFS();
-
 	App->map->Draw();
 
 	int x, y;

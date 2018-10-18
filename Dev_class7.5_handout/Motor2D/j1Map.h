@@ -152,6 +152,9 @@ private:
 	/// BFS
 	p2Queue<iPoint>		frontier;
 	p2List<iPoint>		visited;
+	p2List<iPoint>		came_from;
+
+	bool limit_reached = false;
 };
 
 #endif // __j1MAP_H__

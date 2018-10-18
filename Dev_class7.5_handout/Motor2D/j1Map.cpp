@@ -45,43 +45,55 @@ void j1Map::PropagateBFS()
 	iPoint down_neightbor;
 	iPoint left_neightbor;
 	iPoint right_neightbor;
+	
+	iPoint limit;
 
-	if (frontier.Count() > 0)
+	
+
+	if (frontier.Count() > 0 && limit_reached == false)
 	{
 		frontier.Pop(tile);
+		if (tile == limit) 
+		{
+			limit_reached = true;
+			return;
+		}
 
 		top_neightbor = { tile.x, tile.y - 1 };
-		down_neightbor = { tile.x, tile.y + 1 };
 		left_neightbor = { tile.x - 1 , tile.y };
+		down_neightbor = { tile.x, tile.y + 1 };
 		right_neightbor = { tile.x + 1, tile.y };
+
+		// TODO 2: For each neighbor, if not visited, add it
+		// to the frontier queue and visited list
 
 		if (visited.find(top_neightbor) == -1 && IsWalkable(top_neightbor.x, top_neightbor.y))
 		{
 			frontier.Push(top_neightbor);
 			visited.add(top_neightbor);
-		}
-		if (visited.find(down_neightbor) == -1 && IsWalkable(down_neightbor.x, down_neightbor.y))
-		{
-			frontier.Push(down_neightbor);
-			visited.add(down_neightbor);
+			came_from.add(tile);
 		}
 		if (visited.find(left_neightbor) == -1 && IsWalkable(left_neightbor.x, left_neightbor.y))
 		{
 			frontier.Push(left_neightbor);
 			visited.add(left_neightbor);
+			came_from.add(tile);
+		}
+		if (visited.find(down_neightbor) == -1 && IsWalkable(down_neightbor.x, down_neightbor.y))
+		{
+			frontier.Push(down_neightbor);
+			visited.add(down_neightbor);
+			came_from.add(tile);
 		}
 		if (visited.find(right_neightbor) == -1 && IsWalkable(right_neightbor.x, right_neightbor.y))
 		{
 			frontier.Push(right_neightbor);
 			visited.add(right_neightbor);
+			came_from.add(tile);
 		}
+
 	}
 	
-	// TODO 2: For each neighbor, if not visited, add it
-	// to the frontier queue and visited list
-
-
-
 }
 
 void j1Map::DrawBFS()
