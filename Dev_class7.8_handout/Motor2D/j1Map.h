@@ -132,10 +132,12 @@ public:
 	void ResetPath();
 	void DrawPath();
 	void Path(int x, int y);
+	void SetGoal(int x, int y);
 
 	// Propagation style
 	void PropagateBFS();
 	void PropagateDijkstra();
+	void PropagateAStar();
 
 private:
 
@@ -156,6 +158,8 @@ private:
 	pugi::xml_document	map_file;
 	p2SString			folder;
 	bool				map_loaded;
+	bool				goal_set;
+	bool				goal_found;
 
 	/// BFS
 	p2PQueue<iPoint>	frontier;
@@ -164,6 +168,8 @@ private:
 	uint				cost_so_far[COST_MAP][COST_MAP];
 	p2DynArray<iPoint>	path;
 	SDL_Texture*		tile_x = nullptr;
+	iPoint				goal_point;
+	iPoint				source_point = { 19, 4 };
 };
 
 #endif // __j1MAP_H__
